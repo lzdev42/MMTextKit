@@ -51,7 +51,7 @@ fun VTextField(
     value: TextFieldValue,
     onValueChange: (TextFieldValue) -> Unit,
     modifier: Modifier = Modifier,
-    verticalFontFamily: FontFamily,
+    verticalFontFamily: FontFamily = FontFamily.Default,
     style: TextStyle = TextStyle.Default,
     readOnly: Boolean = false,
     selectable: Boolean = true,
