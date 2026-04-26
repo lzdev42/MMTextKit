@@ -1,0 +1,40 @@
+# OS
+.DS_Store
+
+# Gradle
+.gradle/
+build/
+**/build/
+
+# Kotlin / KMP
+.kotlin/
+kotlin-js-store/
+
+# Android
+local.properties
+*.keystore
+*.jks
+captures/
+.externalNativeBuild/
+.cxx/
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+
+# iOS
+iosApp/DerivedData/
+iosApp/Build/
+iosApp/*.xcodeproj/xcuserdata/
+iosApp/*.xcworkspace/xcuserdata/
+iosApp/*.xcworkspace/xcshareddata/SwiftPM/
+iosApp/Pods/
+iosApp/Podfile.lock
+
+# Package Files (Keep wrapper jar)
+*.jar
+*.war
+*.ear
+*.zip
+!gradle/wrapper/gradle-wrapper.jar
