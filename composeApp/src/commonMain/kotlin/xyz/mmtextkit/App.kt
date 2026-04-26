@@ -22,7 +22,7 @@ import mmtextkit.composeapp.generated.resources.NotoSansMongolian_Regular
 @Composable
 fun App() {
     MaterialTheme {
-        val mongolianFont = FontFamily.Default
+        val mongolianFont = FontFamily(Font(Res.font.NotoSansMongolian_Regular))
         
         var textValue by remember { 
             mutableStateOf(TextFieldValue(
