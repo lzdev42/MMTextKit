@@ -15,7 +15,6 @@ import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import org.jetbrains.compose.resources.Font
-import xyz.columnscript.columnscript.components.VTextField
 import mmtextkit.composeapp.generated.resources.Res
 import mmtextkit.composeapp.generated.resources.NotoSansMongolian_Regular
 

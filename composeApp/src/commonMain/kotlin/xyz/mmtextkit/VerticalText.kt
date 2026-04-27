@@ -1,4 +1,4 @@
-package xyz.columnscript.columnscript.components
+package xyz.mmtextkit
 
 import androidx.compose.ui.text.style.BaselineShift
 import androidx.compose.foundation.layout.Spacer
@@ -6,6 +6,7 @@ import androidx.compose.material3.LocalTextStyle
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.drawBehind
+import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.ClipOp
 import androidx.compose.ui.graphics.drawscope.clipRect
 import androidx.compose.ui.graphics.drawscope.rotate
@@ -19,11 +20,9 @@ import androidx.compose.ui.text.rememberTextMeasurer
 import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.unit.Constraints
-import androidx.compose.ui.unit.Dp
-import androidx.compose.ui.unit.dp
 import androidx.compose.ui.text.TextLayoutResult
+import androidx.compose.ui.unit.Density
 import androidx.compose.ui.unit.isSpecified
-
 
 
 internal data class ColumnMetrics(
@@ -39,7 +38,7 @@ internal data class VTextLayoutState(
 
 internal fun TextLayoutResult.computeColumnMetrics(
     config: VTextInternalConfig,
-    density: androidx.compose.ui.unit.Density
+    density: Density
 ): List<ColumnMetrics> {
     // 计算最大行高作为列宽参考值
     var maxLineHeight = 0f
@@ -222,7 +221,7 @@ internal fun VerticalText(
                         val clipBottom = layoutResult.getLineBottom(i)
 
                         translate(left = targetCenterX + inkCenter, top = verticalOffset) {
-                            rotate(degrees = 90f, pivot = androidx.compose.ui.geometry.Offset.Zero) {
+                            rotate(degrees = 90f, pivot = Offset.Zero) {
                                 clipRect(
                                     left = 0f,
                                     top = clipTop,
